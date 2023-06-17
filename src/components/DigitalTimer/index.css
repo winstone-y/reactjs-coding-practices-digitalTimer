@@ -1,0 +1,97 @@
+/* Write your CSS here */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.app-container {
+  height: 100vh;
+  background-image: linear-gradient(to right, #ffffff, #cffcf1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Roboto';
+}
+.app-title {
+  text-align: center;
+}
+.app-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.app-timer {
+  width: 50vw;
+  height: 60vh;
+  background-image: url('https://assets.ccbp.in/frontend/react-js/digital-timer-elapsed-bg.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.timer {
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  border-radius: 100px;
+  border-width: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.timer-display {
+  font-size: 42px;
+  font-weight: 500;
+  color: #00d9f5;
+}
+.timer-status {
+  font-weight: 500;
+  font-size: 20px;
+}
+.app-controls {
+}
+.start-reset {
+  display: flex;
+  margin-bottom: 20px;
+}
+.start {
+  display: flex;
+  align-items: center;
+}
+.start-pause-btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 20px;
+}
+.start-pause-img {
+  height: 40px;
+}
+
+.limit-set {
+  font-size: 28px;
+  font-weight: bold;
+}
+.limit-title {
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  margin: 5px;
+}
+.limit {
+  display: flex;
+  justify-content: center;
+}
+
+.limit-display {
+  background-image: linear-gradient(to right, #3fd4a7, #00d9f5);
+  width: 50px;
+  font-size: 20px;
+  padding: 10px;
+  text-align: center;
+}
