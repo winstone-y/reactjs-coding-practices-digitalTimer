@@ -13,8 +13,10 @@ class DigitalTimer extends Component {
 
   onToggleStart = () => {
     const {timerStart} = this.state
-    if (timerStart === true) {
-      this.timerId = setInterval(this.tick(), 1000)
+    if (timerStart === false) {
+      this.timerId = setInterval(() => {
+        this.tick()
+      }, 1000)
       console.log('timer started')
     } else {
       clearInterval(this.timerId)
@@ -32,15 +34,21 @@ class DigitalTimer extends Component {
 
   onDecrease = () => {
     const {timerStart} = this.state
-    if (timerStart) {
-      this.setState(prevState => ({limit: prevState.limit - 1}))
+    if (timerStart === false) {
+      this.setState(prevState => ({
+        limit: prevState.limit - 1,
+        minutes: prevState.minutes - 1,
+      }))
     }
   }
 
   onIncrease = () => {
     const {timerStart} = this.state
-    if (timerStart) {
-      this.setState(prevState => ({limit: prevState.limit + 1}))
+    if (timerStart === false) {
+      this.setState(prevState => ({
+        limit: prevState.limit + 1,
+        minutes: prevState.minutes + 1,
+      }))
     }
   }
 
